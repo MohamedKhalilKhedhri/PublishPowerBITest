@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./nothing.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <img src="./a.png" alt="Logo" title="My Website">
+        <p>Login</p>
+    </nav>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="./isims.jpg" alt="" class="img">
+                <div class="pubcontent">
+                    <h2>Naruto beats Luffy</h2>
+                    <p>kolim dos ros fos pos world of warcraf dos ros fos pos world of warcraf dos ros fos pos world of warcraf dos ros fos pos world of warcraf</p>
+
+                </div>
+            </div>
+            <div class="slide">
+
+                <div class="pubcontent">
+                    <h2>Lok tor</h2>
+                    <p>kolim dos ros fos pos world of dos ros fos pos world of warcraf dos ros fos pos world of warcraf warcraf</p>
+
+                </div>
+            </div>
+            <div class="slide">
+
+                <div class="pubcontent">
+                    <h2>Zag Zag</h2>
+                    <p>kolim dos ros fos pos world of dos ros fos pos world of warcraf dos ros fos pos world of warcrafwarcraf</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="idots">
+            <input type="radio" name="idott" id="idot" class="idot" checked>
+            <input type="radio" name="idott" id="idot" class="idot">
+            <input type="radio" name="idott" id="idot" class="idot">
+        </div>
+    </div>
+
+
+    <div class="helinks">
+        <ul>
+            <li>
+                <a href="">communication</a>
+            </li>
+            <li>
+                <a href="">regles</a>
+            </li>
+            <li>
+                <a href="">brushag</a>
+            </li>
+        </ul>
+    </div>
+    <h1 class="ob">Présentation De L'observatoire</h1>
+
+    <div class="big">
+        <div class="small">
+            <h2>Les missions de l'observatoire</h2>
+            <ul>
+                <li>lorem ispuaezj kaliforni khaedhri mohammmed naruto kakuzu minato namekazi i wiszah i hineta cars bos roz mos </li>
+                <li>lorem ispuaezj kaliforni khaedhri mohammmed naruto kakuzu minato namekazi i wiszah i hineta cars bos roz mos </li>
+                <li>lorem ispuaezj kaliforni khaedhri mohammmed naruto kakuzu minato namekazi i wiszah i hineta cars bos roz mosazerrrrrrrrraezr eaz zereaz re zrezarazerkalfiorn </li>
+                <li>lorem ispuaezj kaliforni khaedhri mohammmed naruto kakuzu minato namekazi i wiszah i hineta car </li>
+                <li>lorem ispuaezj kaliforni khaedhri mohammmed naruto kakuzu minato namekazi i wiszah i hineta cars bos roz mos </li>
+            </ul>
+        </div>
+        <div class="small">
+            <h2>Méthodologie</h2>
+            <ul>
+                <li>lorem ispuaezj kaliforni khaedhri mohammmed naruto kakuzu minato namekazi i wiszah i hineta cars bos roz mos </li>
+                <li>lorem ispuaezj kaliforni khaedhri mohammmed naruto kakuzu minato namekazi i wiszah i hineta cars bos roz mos </li>
+                <li>lorem ispuaezj kaliforni khaedhri mohammmed naruto kakuzu minato namekazi i wiszah i hineta cars bos roz mosazerrrrrrrrraezr eaz zereaz re zrezarazerkalfiorn </li>
+                <li>lorem ispuaezj kaliforni khaedhri mohammmed naruto kakuzu minato namekazi i wiszah i hineta car </li>
+                <li>lorem ispuaezj kaliforni khaedhri mohammmed naruto kakuzu minato namekazi i wiszah i hineta cars bos roz mos </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <iframe title="Report Section" class="ifr" src="https://app.powerbi.com/view?r=eyJrIjoiZDAwZDY0OTQtNGMwZC00MGE4LThjMjAtODQxZWE1Y2UzZDlmIiwidCI6ImI5ZjQ1MGU4LTYzMGUtNDZjNy04YzBlLTQ1OGJkYTAwZjRjMSJ9" frameborder="0" allowFullScreen="true"></iframe>
+
+
+    <script>
+        //  slider script
+        let dots = document.getElementsByClassName("idot");
+        let timeout;
+        let slideindex = 0;
+
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].addEventListener("click", function() {
+                if (dots[i].checked) {
+
+                    clearTimeout(timeout);
+                    slideindex = i;
+                    showslide(slideindex);
+                    timeout = setTimeout(autoshowslide, 7000, slideindex);
+                }
+            });
+        }
+        showslide(slideindex);
+        timeout = setTimeout(autoshowslide, 7000, slideindex);
+
+        function autoshowslide(slideindex) {
+            slideindex++;
+            if (slideindex >= dots.length) {
+                slideindex = 0;
+            }
+            showslide(slideindex);
+            timeout = setTimeout(autoshowslide, 7000, slideindex);
+        }
+
+        function showslide(slideindex) {
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                dots[i].style.backgroundColor = "white";
+            }
+
+            if (slideindex >= slides.length) {
+                slideindex = 0;
+            }
+
+
+            slides[slideindex].style.display = "flex";
+            dots[slideindex].style.backgroundColor = "black";
+        }
+    </script>
+</body>
+
+
+
+
+</html>
